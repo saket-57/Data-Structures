@@ -1,0 +1,24 @@
+package stacks;
+
+import java.util.Stack;
+
+public class BracketCheck{
+	public boolean checkStr(String input) {
+		Stack<Character> st = new Stack<>();
+		
+		for(var ch:input.toCharArray()) {
+			if(ch==')'|| ch=='(')
+				st.push(ch);
+		}
+		char temp = st.pop();
+		while(!st.empty()) {
+			if(temp==')' && st.peek()=='(') {
+				st.pop();
+			}
+			else
+				return false;
+			temp=st.pop();
+		}
+		return true;
+	}
+}

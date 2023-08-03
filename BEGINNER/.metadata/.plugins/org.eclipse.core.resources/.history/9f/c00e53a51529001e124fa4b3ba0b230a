@@ -1,0 +1,13 @@
+package stacks;
+
+import java.util.Stack;
+
+public class ReverseString{
+	public String revStr(String input) {
+		Stack<Character> st = new Stack<>();
+		
+		for(char letter:input.toCharArray()) {
+			st.push(letter);
+		}
+	}
+}

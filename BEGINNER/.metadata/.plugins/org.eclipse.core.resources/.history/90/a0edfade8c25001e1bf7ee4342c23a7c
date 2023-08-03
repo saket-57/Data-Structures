@@ -1,0 +1,96 @@
+package beginArrays;
+
+public class Arrays{
+	private int[] items;
+	public Arrays(int length) {
+		items = new int[length];
+		
+	}
+	
+	public void print() {
+		for(int i=0;i<items.length;i++) {
+			System.out.print(items[i]+" ");
+		}
+	}
+	
+//	private int sizeArr;
+//	private int length;
+//	//private int posArr;
+//	private int[] arr, copyArr;
+//		
+//	//default constructor
+//	public Arrays() {
+//		this.sizeArr=0;
+//		this.length=0;
+//		//this.posArr=0;
+//		
+//	}
+//	
+//	//parameterized constructor
+//	public Arrays(int size) {
+//		this.sizeArr=size;
+//		this.length=0;
+//		//this.posArr=0;
+//		this.arr = new int[sizeArr];
+//	}
+//	
+//	
+//	//method for insert
+//	
+//	public void insert(int val) {
+//		int loc=this.length;
+//		while( loc< this.sizeArr) {
+//			arr[loc]= val;
+//			++loc;
+//		}
+//		this.length = loc;
+//		
+//		//if size greater then create new array and copy elements
+//		if(this.length>= this.sizeArr) {
+//			++this.sizeArr;
+//			copyArr = new int[this.sizeArr];
+//			for(int i=0; i<this.sizeArr-1;++i) {
+//				copyArr[i]=arr[i];
+//			}
+//			//copyArr[length]=val;
+//			
+//			arr = new int[sizeArr];
+//			for(int j=0; j<sizeArr;++j) {
+//				arr[j]=copyArr[j];
+//			}
+//		}
+//	}
+//	
+//	
+//	//removeAt
+//	
+//	public void removeAt(int pos) {
+//		--this.sizeArr;
+//		copyArr = new int[sizeArr];
+//		for(int i=0; i<pos; i++ ) {
+//			copyArr[i]=arr[i];
+//		}
+//		for(int i=pos; i<sizeArr; i++ ) {
+//			copyArr[i]=arr[i+1];
+//		}
+//		arr = new int[sizeArr];
+//		for(int j=0; j<sizeArr;++j) {
+//			arr[j]=copyArr[j];
+//		}
+//		
+//	}
+//	
+//	public int indexOf(int val) {
+//		for(int i=0; i<sizeArr; i++) {
+//			if(val == arr[i]) {
+//				return i;
+//			}
+//		}
+//		return -1;
+//	}
+//	public void print() {
+//		for(int i=0; i<sizeArr; i++) {
+//			System.out.print(arr[i]+" ");
+//		}
+//	}
+}

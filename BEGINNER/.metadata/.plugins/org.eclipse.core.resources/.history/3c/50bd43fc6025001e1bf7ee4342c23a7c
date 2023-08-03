@@ -1,0 +1,28 @@
+package beginArrays;
+
+public class Arrays{
+	private int sizeArr;
+	private int length;
+	private int posArr;
+	
+	
+	//default constructor
+	public Arrays() {
+		this.sizeArr=0;
+		this.length=0;
+		this.posArr=0;
+		
+	}
+	public Arrays(int size) {
+		this.sizeArr=size;
+		this.length=size;
+		this.posArr=0;
+	}
+	
+	
+	//class for insert
+	
+	public void insert(int val) {
+		
+	}
+}

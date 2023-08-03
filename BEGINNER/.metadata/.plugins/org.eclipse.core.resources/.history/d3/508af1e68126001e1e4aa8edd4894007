@@ -1,0 +1,152 @@
+package beginLists;
+
+public class LinkedList{
+	private class Node{
+		private int value;
+		private Node next;
+		public Node(int value) {
+			this.value = value;
+		}
+	}
+	private Node first;
+	private Node last;
+	
+	public int size() {
+		if(first==null) {
+			return 0;
+		}
+		var i=first;
+		int count=0;
+		while(i!=null) {
+			++count;
+			i=i.next;
+		}
+		return count;
+	}
+	public void addLast(int item) {
+		var node = new Node(item);
+		
+		if(first==null) {
+			first=last=node;
+		}
+		else {
+			last.next = node;
+			last =node;
+		}
+	}
+	
+	public void addFirst(int item) {
+		var node = new Node(item);
+		
+		if(first==null) {
+			first=last=node;
+		}
+		else {
+			node.next=first;
+			first=node;
+		}
+	}
+	public void add_afterValue(int item,int new_item) {
+		if(first==null) {
+			throw new IllegalArgumentException();
+		}		
+		else if(last.value==item) {
+			addLast(new_item);
+		}
+		else {
+			for(Node i=first; i!=null; i=i.next) {
+				if(i.value==item) {
+					Node temp = new Node(new_item);
+					temp.next=i.next;
+					i.next = temp;
+					
+					return;
+				}
+			}
+		}
+		
+	}
+	
+	public void add_atIndex(int index, int new_item) {
+		if(first==null) {
+			throw new IllegalArgumentException();
+		}
+		else if(index<0 || index> size()) {
+			throw new IndexOutOfBoundsException();
+		}
+		else {
+			Node traverse = first;
+			var temp = new Node(new_item);
+			for(int i=0; i<=index;i++) {
+				if(i==index) {
+					temp.next = traverse.next;
+					traverse.next=temp;
+					return;
+				}
+				traverse = traverse.next;
+			}
+		}
+	}
+	
+	public void deleteLast() {
+		if(first==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			Node i=first;
+			while(i.next.next!=null) {
+				i=i.next;
+			}
+			last=i;
+		}
+		
+		
+	}
+	public void deleteFirst() {
+		if(first==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			Node i =first;
+			first = i.next;
+		}
+		
+	}
+	
+	public boolean contains(int item) {
+		for(Node i=first; i!=null;i=i.next) {
+			if(i.value == item) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public int indexOf(int item) {
+		int index=0;
+		for(Node i=first; i!=null;i=i.next,++index) {
+			if(i.value == item) {
+				return index;
+			}
+		}
+		return -1;
+	}
+	
+	
+	//addFirst
+	//addLast
+	//deleteFirst
+	//deleteLast
+	//contains
+	//indexOf
+	public void print() {
+		Node i=first;
+		do {
+			System.out.print(i.value+"->");
+			i=i.next;
+		}while(i!=null );//coz last node next points to null, and i node reaches till last node
+		
+		
+		System.out.print("\n");
+	}
+}

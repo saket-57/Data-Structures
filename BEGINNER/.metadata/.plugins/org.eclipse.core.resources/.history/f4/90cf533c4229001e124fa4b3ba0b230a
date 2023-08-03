@@ -1,0 +1,39 @@
+package stacks;
+
+import java.util.Stack;
+
+public class Balance{
+	public boolean isBalanced(String input) {
+		Stack<Character> st = new Stack<>();
+		
+		for(char ch: input.toCharArray()) {
+			
+			if(isLeftBracket(ch)) {
+				st.push(ch);
+			}
+			if(isRightBracket(ch)) {
+				if(st.empty()) return false;
+				var top = st.pop();
+				if(matchBracket(top,ch)) return false;
+			}
+		}
+		return st.empty();
+	}
+	
+	
+	
+	private boolean isLeftBracket(char ch) {
+		return ch=='[' || ch=='{' || ch=='(' || ch=='<';
+	}
+	
+	private boolean isRightBracket(char ch) {
+		return ch==']' || ch=='}' || ch==')' || ch=='>';
+	}
+	private boolean matchBracket(char left, char right) {
+		return 
+				(left!='(' && right==')')||
+				(left!='[' && right==']')||
+				(left!='{' && right=='}')||
+				(left!='<' && right=='>');
+	}
+}

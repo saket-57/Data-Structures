@@ -1,0 +1,7 @@
+package beginArrays;
+
+public class fetchArrays{
+	public static void main(String[] array_args) {
+		
+	}
+}

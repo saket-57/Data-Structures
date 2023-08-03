@@ -1,0 +1,17 @@
+package beginLists;
+
+/**
+ * @author amarjeet
+ *
+ */
+public class Main{
+	public static void main(String[] args) {
+		var list = new LinkedList();
+		list.addLast(45);
+		list.addLast(35);
+		list.addLast(12);
+		list.addFirst(55);
+		list.addFirst(65);
+		list.print();
+	}
+}

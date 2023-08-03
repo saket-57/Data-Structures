@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/home/amarjeet/GitOSC/MOSH/BEGINNER/.metadata/.plugins/org.eclipse.jdt.core
+2878183903.index
+1307929915.index

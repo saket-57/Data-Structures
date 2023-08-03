@@ -1,0 +1,8 @@
+package beginArrays;
+
+public class fetchArrays{
+	public static void main(String[] array_args) {
+		int numbers = new int[3];
+		numbers.print();
+	}
+}

@@ -1,0 +1,17 @@
+package beginArrays;
+
+public class fetchArray{
+	public static void main(String[] args) {
+		Arrays numbers = new Arrays(3);
+//		numbers.insert(10);
+//		numbers.insert(20);
+//		numbers.insert(30);
+//		numbers.insert(40);
+//		numbers.removeAt(2);
+		numbers.insert(10);
+		numbers.print();
+//		numbers.insert(20);
+//		System.out.println(numbers.indexOf(10));
+		numbers.print();
+	}
+}

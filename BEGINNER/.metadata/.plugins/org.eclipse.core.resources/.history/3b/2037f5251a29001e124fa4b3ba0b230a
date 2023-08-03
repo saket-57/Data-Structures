@@ -1,0 +1,10 @@
+package stacks;
+
+import java.util.Stack;
+
+public class BracketCheck{
+	public boolean checkStr(String input) {
+		Stack<Character> st = new Stack<>();
+		return false;
+	}
+}

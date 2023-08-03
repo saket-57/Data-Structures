@@ -1,0 +1,60 @@
+package beginArrays;
+
+public class Arrays{
+	private int sizeArr;
+	private int length;
+	private int posArr;
+	private int[] arr, copyArr;
+		
+	//default constructor
+	public Arrays() {
+		this.sizeArr=0;
+		this.length=0;
+		this.posArr=0;
+		
+	}
+	
+	//parameterized constructor
+	public Arrays(int size) {
+		this.sizeArr=size;
+		this.length=0;
+		this.posArr=0;
+		this.arr = new int[sizeArr];
+	}
+	
+	
+	//method for insert
+	
+	public void insert(int val) {
+		//int i=this.length;
+		while(this.length < this.sizeArr) {
+			arr[this.length]= val;
+			++this.length;
+		}
+		
+		//if size greater then create new array and copy elements
+		if(this.length>= this.sizeArr) {
+			++sizeArr;
+			copyArr = new int[sizeArr];
+			for(int i=0; i<sizeArr-1;++i) {
+				copyArr[i]=arr[i];
+			}
+			copyArr[length]=val;
+			
+			arr = new int[sizeArr];
+			for(int i=0; i<sizeArr;++i) {
+				arr[i]=copyArr[i];
+			}
+		}
+	}
+	
+	
+	//removeAt
+	
+	public void removeAt(int pos) {
+		//int i = pos;
+		for(int i=pos-1; i<sizeArr; i++ ) {
+			
+		}
+	}
+}

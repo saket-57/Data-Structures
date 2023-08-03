@@ -1,0 +1,16 @@
+package beginArrays;
+
+public class Array{
+	private int[] items;
+	
+	public Array(int length) {
+		items = new int[length];
+	}
+	
+	public void print() {
+		for(int i=0; i<length;i++) {
+			System.out.print(items[i]+ " ");
+		}
+		System.out.print("\n);
+	}
+}

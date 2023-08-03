@@ -1,0 +1,14 @@
+package beginArrays;
+
+public class fetchArray{
+	public static void main(String[] array_args) {
+		Array numbers = new Array(3);
+		numbers.insert(45);
+		numbers.insert(34);
+		numbers.insert(23);
+		numbers.insert(33);
+		numbers.removeAt(2);
+		numbers.insert(14);
+		numbers.print();
+	}
+}

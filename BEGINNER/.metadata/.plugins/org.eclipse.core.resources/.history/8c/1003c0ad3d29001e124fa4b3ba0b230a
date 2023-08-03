@@ -1,0 +1,29 @@
+package stacks;
+
+import java.util.Stack;
+
+public class Balance{
+	public boolean isBalanced(String input) {
+		Stack<Character> st = new Stack<>();
+		
+		for(char ch: input.toCharArray()) {
+			
+			if(ch=='[' || ch=='{' || ch=='(' || ch=='<') {
+				st.push(ch);
+			}
+			if(ch==']' || ch=='}' || ch==')' || ch=='>') {
+				if(st.empty()) return false;
+				if(st.peek()=='(' && ch==')') {
+					st.pop();
+				}
+				else if(st.peek()=='[' && ch==']'){
+					st.pop();
+				}
+				else if(st.peek()=='{' && ch=='}') {
+					st.pop();
+				}
+			}
+		}
+		return(st.isEmpty());
+	}
+}
